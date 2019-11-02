@@ -1,0 +1,80 @@
+##################### PRIMEIROS PASSOS
+// definir a pasta do projeto
+// criar o arquivo package.json
+yarn init -y
+//instalar as dependencias necessárias para produção (-D)
+yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli -D
+//instalar as dependencias padrão
+yarn add react react-dom
+//criar novo arquivo na raiz chamado babel.config.js
+//criar novo arquivo na raiz chamado webpack.config.js
+
+//nova pasta em raiz chamada src
+//novo arquivo chamado index.js em /src
+
+//nova pasta em raiz chamada public
+
+//instalar nova dependencia de desenvolvimento
+yarn add babel-loader -D
+
+//configurar script 'build' em packet.json
+
+//instalar dependencia de webpack-dev-server para autorefresh
+yarn add webpack-dev-server -D
+//novo script para comparação em package.json
+build - gera um bundle condensado em uma linha para otimização de tamanho
+dev - para ambiente de desenvolvimento gera um bundle legível
+
+
+######################## Componente Raíz
+// alterar aquivo index.js em src
+// novo arquivo em src chamado App.js
+
+####################### Importando Css no JavaScript
+// novas dependencias style-loader e css-loader (-D)
+yarn add style-loader css-loader -D
+// nova rule no arquivo webpack.config.js
+
+###################### Importando Imagens no JavaScript
+// nova dependencia
+yarn add file-loader -D
+// nova rule no arquivo webpack.config.js
+//nova pasta em src chamada assets
+// alteração no arquivo App.js
+
+####################### Class Components
+// nova pasta em src chamada components
+// novo arquivo chamado TechList
+// importação do novo componente no App.js
+// novo plugin do babel para utilizar o state mais resumidamente nos arquivos
+yarn add @babel/plugin-proposal-class-properties -D
+// alteração no arquivo babel.config.js para utilizar o plugin acima
+
+#################### Estado e Imutabilidade
+// utilização de funções do tipo arrowfunction para alterar estados
+// estados são imutaveis e são apenas alterados pelo setState() do Component importado do React
+// alterar objetos e arrays de um state implica em recriá-los do ZERO, por exemplo com o ... (spread)
+
+################### Removendo itens do estado
+// utilização do filter para retornar apenas valores diferentes do passado
+// uma função com parametros precisa ser chamada por uma arrowfunction dentro dos métodos onChange, onClick...
+
+################# Propriedades do React
+//separar o list item do componente de lista
+// novo arquivo TechItem.js em components
+// podemos acessar as propriedades passadas para um componente através de:
+	// para componentes em função -  props.<propriedade> (pode receber por desestruturação)
+	// para componentes em classe - this.props.<propriedade>
+// qualquer coisa pode ser passada como propriedade para um componente
+// funções que manipulam estado devem estar no componente onde o estado existe
+
+################## Default Props e PropTypes
+// componentes possuem propriedades chamadas defaultProps
+// nova dependencia para lidar com a tipagem das propriedades enviadas
+yarn add prop-types
+// utilizar propTypes e defaultProps em componentes de classe podem ser passados como componentes estáticos dentro da propria classe
+
+################## Ciclo de vida do componente
+// utilizado nos Class Components
+
+
